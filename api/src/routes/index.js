@@ -11,8 +11,8 @@ const router = Router();
 router.use('/countries', countries);
 router.use('/activities', activities);
 
-// router.get('/', (req, res) => {
-//     res.send('HOME');
-//   });
+router.get('/', (req, res) => {
+    res.send('HOME');
+});
 
 module.exports = router;

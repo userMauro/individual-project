@@ -1,9 +1,8 @@
 const { Router } = require('express');
-const { Country } = require('../models/Country');
 const router = Router();
+const getAllCountries = require('../../controllers/countries');
+const getApiCountry = require('../utils/getApi');
 
-router.get('/', async (req, res) => {
-    res.send('llegamos al /countries papa')
-})
+router.get('/', getAllCountries);
 
 module.exports = router;

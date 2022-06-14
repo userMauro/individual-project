@@ -1,0 +1,8 @@
+.countries-container {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(200px, 1fr));
+    background-color:  rgb(153, 153, 153);
+    padding-left: 50px;
+}

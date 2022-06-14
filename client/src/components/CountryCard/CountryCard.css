@@ -1,0 +1,26 @@
+.card {
+    border: 1px solid transparent rgb(153, 153, 153);
+    background-color: rgb(230, 230, 230);
+    border-radius: 5px;
+    width: 151px;
+    height: 200px;
+    margin-top: 20px;
+}
+
+.card:hover {
+    background-color: rgb(123, 123, 123);
+    transition: background-color .2s;
+}
+
+.country {
+    display: column;
+    justify-content: center;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    width: 150px;
+    height: 100px;
+}

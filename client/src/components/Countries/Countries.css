@@ -1,0 +1,9 @@
+.container {
+    background-color: #0c0c0c;
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(200px, 1fr));
+    padding-left: 50px;
+    /* justify-content: center; */
+}

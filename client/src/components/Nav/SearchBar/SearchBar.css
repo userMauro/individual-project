@@ -1,0 +1,13 @@
+.searchAndContinents {
+    display: flex;
+    align-items: center;
+}
+
+.inputSearch {
+    margin-left: 5px;
+}
+
+.selectContinents {
+    margin-left: 5px;
+    height: 21px;
+}

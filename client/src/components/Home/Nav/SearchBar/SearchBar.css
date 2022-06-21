@@ -1,0 +1,36 @@
+.searchAndContinents {
+    display: flex;
+    align-items: center;
+}
+
+.inputSearch {
+    margin-left: 15px;
+}
+
+#title {
+    background-color: rgba(34, 34, 34, 0.5);
+    border: 1px solid white;
+    /* border-radius: 6px; */
+    padding: 5px;
+    color: white;
+    outline: none;
+}
+
+.selectContinents {
+    margin-left: 15px;
+    background-color: rgba(34, 34, 34, 0.5);
+    color:rgb(203, 203, 203);
+    outline: none;
+    border: 0;
+    height: 30px;
+    border-radius: 2px;
+    width: 120px;
+    /* padding: 15px; */
+}
+
+.selectContinents:hover {
+    background-color: rgba(241, 241, 241, 0.945);
+    color: rgba(17, 17, 17); 
+    transition: background-color .5s;
+}
+

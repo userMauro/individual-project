@@ -13,9 +13,10 @@ import {
 
 const initialState = {
   countries: [],
+  filters: [],
+  renderized: [],
   country: {},
   activities: [],
-  filters: [],
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -25,21 +26,12 @@ const rootReducer = (state = initialState, action) => {
             ...state,
             countries: action.payload,
             filters: action.payload,
+            renderized: action.payload,
           };
         case GET_COUNTRIES_NAME:
           return {
             ...state,
-            filters: action.payload,
-          //   var pResp = paises.filter((p) => {
-          //     let activities = p.Activities.filter( (a) => a.name.includes('patinar'));
-          //     if (activities && activities.length > 0) {
-          //         return true;
-          //     }
-          //     return false;
-          // } );
-            // filters = [{}, {}, {}, {}]         TODOS LOS COUNTRIES POR CONTINENT
-            // action.payload = [{}, {}, {}, {}]  TODOS LOS COUNTRIES QUE MATCHEARON EL NAME EN EL INPUT
-            // filters: [...state.filters.filter(c => action.payload.filter(a => a.name === c.name))],
+            renderized: action.payload,
           };
         case GET_COUNTRY_ID:
           return {
@@ -59,18 +51,19 @@ const rootReducer = (state = initialState, action) => {
         case FILTER_BY_CONTINENT:
           return {
             ...state,
-            filters: state.countries.filter(c => c.continent === action.payload)
+            filters: state.countries.filter(c => c.continent === action.payload),
+            renderized: state.countries.filter(c => c.continent === action.payload)
           };
         case ORDER_BY_NAME_AZ:
           let countriesByName;
           action.payload === 'asc' ? 
-            countriesByName = state.filters.sort((a, b) => {
+            countriesByName = state.renderized.sort((a, b) => {
               if (a.name > b.name) return 1;
               if (b.name > a.name) return -1;
               return 0;
             })
           :
-            countriesByName = state.filters.sort((a, b) => {
+            countriesByName = state.renderized.sort((a, b) => {
               if (a.name > b.name) return -1;
               if (b.name > a.name) return 1;
               return 0;
@@ -78,23 +71,23 @@ const rootReducer = (state = initialState, action) => {
 
           return {
             ...state,
-            filters: countriesByName
+            renderized: countriesByName.filter(c => c)
           };
         case ORDER_BY_POPULATION_AZ:
           let countriesByPopulation;
           action.payload === 'asc' ?
-            countriesByPopulation = state.filters.sort((a, b) => b.population - a.population)
+            countriesByPopulation = state.renderized.sort((a, b) => b.population - a.population)
           :
-            countriesByPopulation = state.filters.sort((a, b) => a.population - b.population)
+            countriesByPopulation = state.renderized.sort((a, b) => a.population - b.population)
           
           return {
             ...state,
-            filters: countriesByPopulation
+            renderized: countriesByPopulation.filter(c => c)
           };
         case ORDER_BY_ACTIVITIES:
           return {
             ...state,
-            filters: state.countries.filter(c => c.Activities.find(a => a.name === action.payload))
+            renderized: state.filters.filter(c => c.Activities.find(a => a.name === action.payload))
         };
         case CLEAR_CACHE:
           return {

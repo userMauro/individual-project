@@ -1,0 +1,32 @@
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgba(230, 230, 230, .7);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(123, 123, 123, .4);
+}
+
+.pageBtn {
+    display: inline-block;
+    justify-content: center;
+    border: 1px solid rgb(123, 123, 123);
+    margin: 3px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.pageBtn:hover {
+    background-color: rgb(123, 123, 123);
+}
+
+.pageBtn:focus {
+    background-color: rgb(123, 123, 123);
+}
+
+/* .pageBtn:active {
+    background-color: rgb(123, 123, 123);
+} */

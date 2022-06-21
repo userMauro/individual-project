@@ -1,0 +1,15 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(
+        5,
+        minmax(50px, 1fr));
+    padding-left: 80px;
+    padding-right: 30px;
+    padding-bottom: 35px;
+}
+
+.loading {
+    justify-content: center;
+    margin-top: 15px;
+    padding-left: 420px;
+}

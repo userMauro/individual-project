@@ -4,11 +4,11 @@ const putActivity = async (req, res, next) => {
     const { name, difficulty, duration, season, idCountries } = req.body;
 
     if (!name || !difficulty || !duration || !season) 
-        return res.status(404).json({msg: 'Faltan ingresar datos en el formulario.'});
+        return res.status(404).json({msg: 'Empty fields.'});
     if (difficulty > 5 || difficulty < 1) 
-        return res.status(404).json({msg: 'La dificultad se mide entre 1 y 5.'});
+        return res.status(404).json({msg: 'Difficult (1-5)'});
     if (duration < 0 || duration > 72) 
-        return res.status(404).json({msg: 'La duración máxima son 72hs.'});
+        return res.status(404).json({msg: 'Enter duration.'});
 
     try {
         const existsActivity = await Activities.findOne({
@@ -37,7 +37,7 @@ const getAllActivities = async (req, res, next) => {
     try {
         let activities = await Activities.findAll()
         activities ? res.json(activities) : res.status(404).json({msg: "Can't find activities in the database"});
-    } catch (error) {S
+    } catch (error) {
         return next(error);
     }
 }

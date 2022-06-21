@@ -1,0 +1,42 @@
+.orders {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    border: 1px solid rgb(123, 123, 123);
+    border-radius: 5px;
+}
+
+#order-AZ {
+    margin-left: 10px;
+}
+
+.orderActivities {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    border: 1px solid rgb(123, 123, 123);
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.filters {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(230, 230, 230, .8);
+    padding: 5px;
+}
+
+.createActivity {
+    background-color: rgb(230, 230, 230);
+    border: 1px solid rgb(123, 123, 123);
+    padding: 10px;
+    margin-left: 10px;
+    margin-top: 2px;
+    border: 1px solid rgb(123, 123, 123);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.createActivity:hover {
+    background-color: rgb(123, 123, 123);
+    color:white;
+}

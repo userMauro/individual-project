@@ -1,0 +1,114 @@
+.details {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(230, 230, 230, .5);
+    padding-top: 10px;
+    cursor: default;
+}
+
+.detailsCountry {
+    display: flex;
+    flex-direction: column;
+}
+
+.detailsFlag {
+    background-color: rgba(230, 230, 230, .7);
+    border: 1px solid rgb(123, 123, 123);
+    border-radius: 20px;
+    /* padding: 2px; */
+    padding-bottom: 5px;
+}
+
+.detailsImg {
+    width: 400px;
+    height: 250px;
+    border-radius: 20px 20px 0px 0px;
+    margin-bottom: -25px;
+    border-bottom: 1px solid rgb(123, 123, 123);
+}
+
+.detailsName {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -25px;
+}
+
+.detailsCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: rgba(230, 230, 230, .7);
+    border: 1px solid rgb(123, 123, 123);
+    margin-top: 5px;
+    border-radius: 20px;
+    width: 400px;
+    height: auto;
+}
+
+.detailsCardLabels {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.detailsLabels {
+    margin-top: -10px;
+}
+
+.detailsCardValues {
+    display: flex;
+    flex-direction: column;
+    font-style: oblique;
+}
+
+.activitiesCountry {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(123, 123, 123, .2);
+    border: 1px solid rgb(123, 123, 123);
+    border-radius: 15px;
+    margin-left: 20px;
+    padding-bottom: 10px;
+}
+
+.activitiesBox {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: cover;
+    margin-top: -20px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.activitiesOfCountry {
+    display: flex;
+    justify-content: flex-start;
+    border: 1px solid rgb(123, 123, 123);
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 12px;
+    width: auto;
+    height: auto;
+    background-color: rgb(230, 230, 230);
+    padding: 5px;
+}
+
+.activitiesOfCountry:hover {
+    background-color: rgba(123, 123, 123, .8);
+    color:white;
+}
+
+.btnActivitiesofCountry {
+    margin-right: 3px;
+    font-size: 11px;
+    width: auto;
+    height: auto;
+}

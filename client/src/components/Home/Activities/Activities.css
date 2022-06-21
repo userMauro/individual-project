@@ -1,0 +1,80 @@
+.containerActivities {
+    background-color: rgba(230, 230, 230, .5);
+    height: 500px;
+}
+
+.activities {
+    display:flex;
+    flex-direction: column;
+    height: 310px;
+    width: 400px;
+    margin:auto;
+    padding-top: 10px;
+}
+
+.inputActivity {
+    padding: 5px;
+}
+
+.selectFilters {
+    padding: 2px;
+    width: 300px;
+}
+
+.countriesBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: cover;
+    width: 380px;
+    height: 152px;
+    border: 1px solid rgb(123, 123, 123);
+    border-radius: 5px;
+}
+
+.countriesAdded {
+    border: 1px solid rgb(123, 123, 123);
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 12px;
+    width: 50px;
+    height: 20px;
+    cursor:default;
+}
+
+.countriesAdded:hover {
+    background-color: rgb(255, 67, 67);
+}
+
+.btnCountriesAdded {
+    border-color: transparent;
+    background-color: transparent;
+    margin-right: 3px;
+    margin-left: -10px;
+    font-weight: bold;
+    font-size: 11px;
+    width: 3px;
+    height: 20px;
+    color: rgb(230, 230, 230);
+    cursor:pointer;
+}
+
+.addBtnActivity {
+    background-color: rgb(230, 230, 230);
+    border: 1px solid rgb(123, 123, 123);
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.addBtnActivity:hover {
+    background-color: rgb(123, 123, 123);
+    color:white;
+}
+
+.labelCountriesAdded {
+    font-size: small;
+}

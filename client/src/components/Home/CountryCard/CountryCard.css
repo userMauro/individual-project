@@ -1,0 +1,39 @@
+.card {
+    border: 1px solid transparent rgb(153, 153, 153);
+    background-color: rgba(230, 230, 230, 0.9);
+    border-radius: 5px;
+    width: 200px;
+    height: 150px;
+    margin-top: 20px;
+    padding: 2px;
+    border: 1px solid rgb(123, 123, 123);
+}
+
+.card:hover {
+    background-color: rgba(230, 230, 230, .9);
+    transform: scale(1.3);
+    transition: background-color .2s;
+}
+
+.country {
+    display: column;
+    justify-content: center;
+    margin-top: -13px;
+}
+
+.nameDetail {
+    font-size: small;
+}
+
+.continentsDetailName {
+    margin-top: -15px;
+    font-size: small;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    border-radius: 5px 5px 0px 0px;
+    width: 200px;
+    height: 100px;
+}

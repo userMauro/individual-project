@@ -1,8 +1,20 @@
 .App {
   text-align: center;
+  background-image: url('https://www.stanser.com/wp-content/uploads/2019/09/planisferio.png');
+  background-size: contain;
+  background-position: center;
 }
 
-.App-logo {
+
+
+
+
+
+
+
+
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -34,4 +46,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

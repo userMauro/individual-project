@@ -48,4 +48,17 @@ const getCountryByID = async (req, res, next) => {
     }
 };
 
-module.exports = { getAllCountries, getCountryByID };
+const removeActivity = async (req, res, next) => {
+    try {
+        const { idActivity, idCountry } = req.body;
+        let countryID = await Country.findByPk(idCountry);
+        if (countryID) {
+            countryID.removeActivity([idActivity])
+            res.json({msg: 'Activity removed'})
+        };
+    } catch (error) {
+        return next(error)
+    };
+};
+
+module.exports = { getAllCountries, getCountryByID, removeActivity };

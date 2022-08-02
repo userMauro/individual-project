@@ -3,11 +3,7 @@ import { useDispatch } from "react-redux";
 
 import './SearchBar.css';
 
-import { 
-    getCountries,
-    getAllCountries, 
-    filterByContinent 
-} from "../../../../redux/actions/index.js";
+import { getCountries, getAllCountries, filterByContinent } from "../../../../redux/slice";
 
 export default function SearchBar () {
     const dispatch = useDispatch();

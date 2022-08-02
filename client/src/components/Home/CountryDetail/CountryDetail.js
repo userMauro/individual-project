@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { getCountryID, clearCache, deleteActivity } from '../../../redux/actions';
+
+import { getCountryID, clearCache, deleteActivity } from '../../../redux/slice';
 
 import './CountryDetail.css';
 
@@ -9,7 +10,7 @@ export default function CountryDetail () {
     let { idCountry } = useParams();
 
     let dispatch = useDispatch();
-    let c = useSelector((state) => state.country);
+    let c = useSelector((state) => state.rootReducer.country);
     const [state, setState] = useState();
 
     // monto el país

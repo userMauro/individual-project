@@ -5,16 +5,16 @@ import { Link } from 'react-router-dom';
 import './Filters.css';
 
 import { 
-    getAllActivities, 
+    getAllActivities,
     orderByNameAZ,
     orderByPopulationAZ,
     orderByActivities,
     getAllCountries,
-} from '../../../../redux/actions/index.js'
+} from '../../../../redux/slice';
 
 export default function Filters () {
     const dispatch = useDispatch();
-    const activities = useSelector(state => state.activities);
+    const activities = useSelector(state => state.rootReducer.activities);
     let [/*sort*/, setSort] = useState();
 
     // monto las actividades para el <select> 'Activities'

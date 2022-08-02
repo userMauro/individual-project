@@ -1,15 +1,16 @@
-import React, { /*Component,*/ useEffect, useState } from 'react';
-import { /*connect,*/ useDispatch, useSelector } from 'react-redux';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
-import { getAllCountries } from '../../../redux/actions/index.js';
+import { getAllCountries } from '../../../redux/slice.js';
 import CountryCard from '../CountryCard/CountryCard.js';
 import Paginate from '../Paginate/Paginate.js';
 import './Countries.css';
 
 export default function Countries () {
-    let dispatch = useDispatch();
-    let countries = useSelector(state => state.renderized);
-    // console.log(countries)
+    const dispatch = useDispatch();
+
+    const countries = useSelector(state => state.rootReducer.renderized);
+    // const { renderized: countries } = useSelector(state => state.rootReducer);
     
     useEffect(() => {
         dispatch(getAllCountries());
@@ -94,48 +95,3 @@ export default function Countries () {
         </div>
     );
 };
-
-// Componente de clase
-// export class Countries extends Component {
-
-//     componentDidMount(){
-//         this.props.getAllCountries();
-//     };
-
-//     render() {
-//         return (
-//             <div className='container'>
-//             {
-//                 !this.props.countries.length ?
-//                     <div className='Loading'>
-//                         <img alt='loadingImg' src='https://1.bp.blogspot.com/-Os_G7fBordU/W1dFCdFA3AI/AAAAAAAAp-I/NLfM0h9Nvw42dtkvBlgzC_1_QFmKHBEVgCLcBGAs/s1600/world_flags_globe_1.gif'/>
-//                     </div>
-//                 :
-//                 this.props.countries?.map (c =>
-//                     <CountryCard 
-//                         img={c.img}
-//                         name={c.name} 
-//                         continent={c.continent}
-//                         id={c.id}
-//                         key={c.id}
-//                     />
-//                 )
-//             }
-//             </div>
-//         );
-//     };
-// };
-
-// export function mapStateToProps(state) {
-//     return {
-//       countries: state.filters,
-//     }
-// };
-
-// export function mapDispatchToProps(dispatch) {
-//     return {
-//         getAllCountries: () => dispatch(getAllCountries()),
-//     }
-// };
-
-// export default connect(mapStateToProps, mapDispatchToProps)(Countries);

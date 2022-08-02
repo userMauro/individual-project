@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { createActivity, getAllCountries } from "../../../redux/actions";
+import { getAllCountries, createActivity } from "../../../redux/slice";
 import './Activities.css';
 
 
 export default function Activities () {
     const dispatch = useDispatch();
-    let countries = useSelector(state => state.countries);
+    let countries = useSelector(state => state.rootReducer.countries);
 
     // mostrar listado de países ordenado alfabéticamente
-    countries?.sort((a, b) => {
-        if (a.name > b.name) return 1;
-        if (b.name > a.name) return -1;
-        return 0;
-    });
+    // countries?.sort((a, b) => {
+    //     if (a.name > b.name) return 1;
+    //     if (b.name > a.name) return -1;
+    //     return 0;
+    // });
 
     const [state, setState] = useState({
         name: "",
@@ -62,7 +62,6 @@ export default function Activities () {
             document.getElementById('durationSel').value = 'Select duration';
             document.getElementById('difficultySel').value = 'Select difficulty';
             document.getElementById('seasonSel').value = 'Select season';
-            alert('Activity added!');
         };
     };
 

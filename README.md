@@ -1,10 +1,7 @@
-Proyecto individual para "Soy Henry" usando las siguientes tecnologías:
+Proyecto individual SPA (Single Page Application) Web donde encuentras todos los países del mundo con su bandera y algunas características. Usando las siguientes tecnologías:
 ```js
 "HTML", "CSS", "Node.js", "React.js", "Redux Toolkits", "Express.js", "PostgreSQL", "Sequelize" 
 ```
-
-
-SPA (Single Page Application) Web donde encuentras todos los países del mundo con su bandera y algunas características.
 
 ```Landing```
 ![Landing](https://github.com/userMauro/individual-project/blob/main/client/assets/PI(1).png)

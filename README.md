@@ -1,6 +1,6 @@
-Proyecto individual usando las siguientes tecnologías:
+Proyecto individual para "Soy Henry" usando las siguientes tecnologías:
 ```js
-HTML, CSS, Node.js, React.js, Redux Toolkits, Express.js, PostgreSQL y Sequelize, 
+"HTML", "CSS", "Node.js", "React.js", "Redux Toolkits", "Express.js", "PostgreSQL", "Sequelize" 
 ```
 
 ```Landing```

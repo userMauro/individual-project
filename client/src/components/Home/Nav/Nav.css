@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('D:\mamoproblemas\Programming\SoyHenry\proyecto individual\PI-Countries-main\client\src\imgs\navbar.png');
+    background: url('https://raw.githubusercontent.com/userMauro/individual-project/main/client/src/imgs/navbar.png');
     padding: 20px;
     border-bottom: 5px solid rgba(53, 53, 53, 0.5);
 }

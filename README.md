@@ -1,4 +1,4 @@
-Proyecto individual SPA (Single Page Application) Web donde encuentras todos los países del mundo con su bandera y algunas características. Usando las siguientes tecnologías:
+Proyecto individual SPA (Single Page Application) Web donde se le hacen peticiones a una API externa donde encuentras todos los países del mundo con su bandera y algunas características. Usando las siguientes tecnologías:
 ```js
 "HTML", "CSS", "Node.js", "React.js", "Redux Toolkits", "Express.js", "PostgreSQL", "Sequelize" 
 ```

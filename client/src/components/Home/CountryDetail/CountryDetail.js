@@ -23,11 +23,11 @@ export default function CountryDetail () {
         return () => dispatch(clearCache());
     }, [dispatch]);
 
-    function handleClick(idActivity) {
-        c.Activities = c.Activities.filter(c => c.id !== idActivity);
-        dispatch(deleteActivity({idActivity, idCountry}));
-        setState({...state, state: c})  // para actualizar el renderizado de mis activities
-    };
+    // function handleClick(idActivity) {
+    //     c.Activities = c.Activities.filter(c => c.id !== idActivity);
+    //     dispatch(deleteActivity({idActivity, idCountry}));
+    //     setState({...state, state: c})  // para actualizar el renderizado de mis activities
+    // };
 
     return (
         <div>
@@ -79,7 +79,7 @@ export default function CountryDetail () {
                         <div className='activitiesBox'>
                             { c.Activities?.map((a, index) => 
                                 <div className='activitiesOfCountry' key={index}>
-                                    <button className='btnActivitiesofCountry' onClick={() => handleClick(a.id)}>X</button>
+                                    {/* <button className='btnActivitiesofCountry' onClick={() => handleClick(a.id)}>X</button> */}
                                     {a.name}
                                 </div>
                             )}

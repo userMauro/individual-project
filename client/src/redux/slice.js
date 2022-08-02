@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const ROUTE = "https://countries-pi-deploy.herokuapp.com/"
+
 export const slice = createSlice({
     name: "rootReducer",
     initialState: {
@@ -68,7 +70,7 @@ export const slice = createSlice({
 
 // ACTIONS async
     export const getAllCountries = () => dispatch => {
-        fetch(`http://localhost:3001/countries`)
+        fetch(ROUTE + 'countries')
             .then((r) => r.json())
             .then(json => {
                 dispatch(slice.actions.getAllCountries(json))
@@ -77,7 +79,7 @@ export const slice = createSlice({
     };
 
     export const getCountries = (name) => dispatch => {
-        return fetch(`http://localhost:3001/countries?name=${name}`)
+        return fetch(ROUTE + `countries?name=${name}`)
             .then((r) => r.json())
             .then(json => {
                 dispatch(slice.actions.getCountries(json));
@@ -86,7 +88,7 @@ export const slice = createSlice({
     };
     
     export const getCountryID = (id) => dispatch => {
-        return fetch(`http://localhost:3001/countries/${id}`)
+        return fetch(ROUTE + `countries/${id}`)
             .then((r) => r.json())
             .then(json => {
                 dispatch(slice.actions.getCountryID(json));
@@ -95,7 +97,7 @@ export const slice = createSlice({
     };
     
     export const getAllActivities = () => dispatch => {
-      return fetch('http://localhost:3001/activities')
+      return fetch(ROUTE + 'activities')
       .then((r) => r.json())
       .then(json => {
         dispatch(slice.actions.getAllActivities(json));
@@ -104,7 +106,7 @@ export const slice = createSlice({
     };
     
     export const createActivity = (data) => dispatch => {
-        return fetch('http://localhost:3001/activities', 
+        return fetch(ROUTE + 'activities', 
             {method: 'POST', body: JSON.stringify(data), headers: {'Content-Type': 'application/json'}})
             .then(r => r.json())
             .then(json => {
@@ -118,7 +120,7 @@ export const slice = createSlice({
     };
     
     export const deleteActivity = (data) => {
-        return fetch(`http://localhost:3001/countries/delete`,
+        return fetch(ROUTE + 'countries/delete',
             {method: 'DELETE', body: JSON.stringify(data), headers: {'Content-Type': 'application/json'}})
                 .then(r => r.json())
                 .then(json => {
